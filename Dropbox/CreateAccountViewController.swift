@@ -10,11 +10,38 @@ import UIKit
 
 class CreateAccountViewController: UIViewController {
 
+    @IBOutlet weak var passwordTextField: UITextField!
+    
+    @IBOutlet weak var weakPasswordIndicator: UIImageView!
+    @IBOutlet weak var sosoPasswordIndicator: UIImageView!
+    @IBOutlet weak var goodPasswordIndicator: UIImageView!
+    @IBOutlet weak var greatPasswordIndicator: UIImageView!
+    
+    @IBOutlet weak var createNavButton: UIBarButtonItem!
+    
+    
+    lazy var defaultSystemTintColor:UIColor? = {
+        var view = UIView()
+        return view.tintColor
+    }()
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.weakPasswordIndicator?.hidden = true
+        self.sosoPasswordIndicator?.hidden = true
+        self.goodPasswordIndicator?.hidden = true
+        self.greatPasswordIndicator?.hidden = true
+    }
+    
+
     
     @IBAction func showAlert() {
         let alertController = UIAlertController(title: "", message: "Before you can complete your registration, you must accept the Dropbox Terms of Service", preferredStyle: .ActionSheet)
         
-        let defaultAction = UIAlertAction(title: "I Agree", style: .Default, handler: nil)
+        let defaultAction = UIAlertAction(title: "I Agree", style: .Default) { action -> Void in
+            self.performSegueWithIdentifier("newBlankAccountSeque", sender: nil)
+        }
+
         alertController.addAction(defaultAction)
         
         let viewTermsAction = UIAlertAction(title: "View Terms", style: .Default) { action -> Void in
@@ -26,26 +53,44 @@ class CreateAccountViewController: UIViewController {
         presentViewController(alertController, animated: true, completion: nil)
     }
     
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    @IBAction func passwordChanged(sender: AnyObject) {
+        var pwLength = passwordTextField.text!
+        print(pwLength.characters.count)
+        var pwCount = Int(pwLength.characters.count)
+        
+        switch pwCount {
+        case 1...3:
+            self.weakPasswordIndicator.hidden = false
+            self.sosoPasswordIndicator.hidden = true
+            self.goodPasswordIndicator.hidden = true
+            self.greatPasswordIndicator.hidden = true
+            createNavButton.tintColor = UIColor.lightGrayColor()
+        case 4...6:
+            self.weakPasswordIndicator.hidden = true
+            self.sosoPasswordIndicator.hidden = false
+            self.goodPasswordIndicator.hidden = true
+            self.greatPasswordIndicator.hidden = true
+            createNavButton.tintColor = defaultSystemTintColor
+        case 7...9:
+            self.weakPasswordIndicator.hidden = true
+            self.sosoPasswordIndicator.hidden = true
+            self.goodPasswordIndicator.hidden = false
+            self.greatPasswordIndicator.hidden = true
+            createNavButton.tintColor = defaultSystemTintColor
+        case 10...20:
+            self.weakPasswordIndicator.hidden = true
+            self.sosoPasswordIndicator.hidden = true
+            self.goodPasswordIndicator.hidden = true
+            self.greatPasswordIndicator.hidden = false
+            createNavButton.tintColor = defaultSystemTintColor
+        default:
+            self.weakPasswordIndicator.hidden = true
+            self.sosoPasswordIndicator.hidden = true
+            self.goodPasswordIndicator.hidden = true
+            self.greatPasswordIndicator.hidden = true
+
+        }
+        
     }
-
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

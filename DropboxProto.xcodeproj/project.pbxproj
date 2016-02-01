@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		203CD9D91C5FFE1F003EE64E /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203CD9D81C5FFE1F003EE64E /* SettingsViewController.swift */; };
+		203CD9DB1C6002D9003EE64E /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203CD9DA1C6002D9003EE64E /* SignInViewController.swift */; };
+		203CD9DD1C6010CC003EE64E /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203CD9DC1C6010CC003EE64E /* PhotosViewController.swift */; };
+		2063B84B1C5AB5BD001B3299 /* WelcomeViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2063B84A1C5AB5BD001B3299 /* WelcomeViewViewController.swift */; };
 		207131C71C5860B5000969C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207131C61C5860B5000969C8 /* AppDelegate.swift */; };
 		207131CC1C5860B5000969C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 207131CA1C5860B5000969C8 /* Main.storyboard */; };
 		207131CE1C5860B5000969C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 207131CD1C5860B5000969C8 /* Assets.xcassets */; };
@@ -17,7 +21,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		207131C31C5860B5000969C8 /* DropboxProto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = DropboxProto.app; path = "/Users/uar179/Documents/source/swift/CodePath/Dropbox/build/Debug-iphoneos/DropboxProto.app"; sourceTree = "<absolute>"; };
+		203CD9D81C5FFE1F003EE64E /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsViewController.swift; path = ../SettingsViewController.swift; sourceTree = "<group>"; };
+		203CD9DA1C6002D9003EE64E /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		203CD9DC1C6010CC003EE64E /* PhotosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
+		2063B82B1C5A915B001B3299 /* DropboxProto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DropboxProto.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2063B84A1C5AB5BD001B3299 /* WelcomeViewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WelcomeViewViewController.swift; path = ../WelcomeViewViewController.swift; sourceTree = "<group>"; };
 		207131C61C5860B5000969C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		207131CB1C5860B5000969C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		207131CD1C5860B5000969C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -25,7 +33,7 @@
 		207131D21C5860B5000969C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		207131DA1C587229000969C8 /* TermsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TermsViewController.swift; sourceTree = "<group>"; };
 		207131DC1C58752A000969C8 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
-		207131E01C587E45000969C8 /* newViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = newViewController.swift; sourceTree = "<group>"; };
+		207131E01C587E45000969C8 /* newViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = newViewController.swift; path = ../newViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,16 +50,21 @@
 		207131BA1C5860B5000969C8 = {
 			isa = PBXGroup;
 			children = (
-				207131E01C587E45000969C8 /* newViewController.swift */,
 				207131C51C5860B5000969C8 /* Dropbox */,
+				2063B82B1C5A915B001B3299 /* DropboxProto.app */,
 			);
 			sourceTree = "<group>";
 		};
 		207131C51C5860B5000969C8 /* Dropbox */ = {
 			isa = PBXGroup;
 			children = (
+				207131E01C587E45000969C8 /* newViewController.swift */,
+				203CD9DC1C6010CC003EE64E /* PhotosViewController.swift */,
+				203CD9D81C5FFE1F003EE64E /* SettingsViewController.swift */,
+				2063B84A1C5AB5BD001B3299 /* WelcomeViewViewController.swift */,
 				207131C61C5860B5000969C8 /* AppDelegate.swift */,
 				207131CA1C5860B5000969C8 /* Main.storyboard */,
+				203CD9DA1C6002D9003EE64E /* SignInViewController.swift */,
 				207131DC1C58752A000969C8 /* CreateAccountViewController.swift */,
 				207131DA1C587229000969C8 /* TermsViewController.swift */,
 				207131CD1C5860B5000969C8 /* Assets.xcassets */,
@@ -78,7 +91,7 @@
 			);
 			name = DropboxProto;
 			productName = Dropbox;
-			productReference = 207131C31C5860B5000969C8 /* DropboxProto.app */;
+			productReference = 2063B82B1C5A915B001B3299 /* DropboxProto.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -132,10 +145,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				203CD9DB1C6002D9003EE64E /* SignInViewController.swift in Sources */,
+				203CD9DD1C6010CC003EE64E /* PhotosViewController.swift in Sources */,
 				207131DD1C58752A000969C8 /* CreateAccountViewController.swift in Sources */,
+				2063B84B1C5AB5BD001B3299 /* WelcomeViewViewController.swift in Sources */,
 				207131DB1C587229000969C8 /* TermsViewController.swift in Sources */,
 				207131C71C5860B5000969C8 /* AppDelegate.swift in Sources */,
 				207131E11C587E45000969C8 /* newViewController.swift in Sources */,
+				203CD9D91C5FFE1F003EE64E /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +300,7 @@
 				207131D71C5860B5000969C8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

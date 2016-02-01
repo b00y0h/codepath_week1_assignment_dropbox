@@ -8,10 +8,12 @@
 
 import UIKit
 
-class TermsViewController: UINavigationController {
+class TermsViewController: UIViewController {
+    
     @IBAction func done(sender: AnyObject) {
         dismissViewControllerAnimated(true, completion: nil)
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
